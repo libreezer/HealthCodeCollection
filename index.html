@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+    <title>健康码收集站</title>
+</head>
+<body>
+<h1>健康码收集站</h1>
+<p>请在下方上传您的健康码截图</p>
+<p style="color: red">请务必等待跳转至显示提交成功的页面再退出浏览器，否则可能上传失败，请仔细检查是否在截图中写有学号+姓名!</p>
+<form name="healthCode" method="post" action="HeathCodeTool.php" enctype="multipart/form-data">
+    <div id="code-div">
+        <input type="file" name="HealthCode">
+    </div>
+    <div id="info-collect">
+        <label class="input-label">请输入学号：
+            <input class="input-editText" name="StudentID" type="number">
+        </label>
+        <br/>
+        <label style="margin-top: 10px" class="input-label">请输入姓名：
+            <input style="margin-top: 10px" class="input-editText" name="StudentName" type="text">
+        </label>
+        <br/>
+        <input class="btn-submit" style="margin-top: 20px" type="submit" value="提交"/>
+    </div>
+    <p id="label-about">本网站为临时赶制，可能会有些许BUG，支持自动添加学号+姓名功能，学生不用自己加了。</p>
+</form>
+</body>
+</html>
